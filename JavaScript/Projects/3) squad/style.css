@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+    display: flex;
+}
+
+li {
+    margin: 10px 0;
+    width: 200px;
+    padding: 10px;
+    background: royalblue;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#buttonsContainer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttonsContainer button {
+    color: white;
+    background: royalblue;
+    padding: 10px;
+    cursor: pointer;
+    border: navajowhite;
+}
+
+.horizontal-view {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.vertical-view {
+    flex-direction: column;
+}

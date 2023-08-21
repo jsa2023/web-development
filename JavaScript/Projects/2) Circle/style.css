@@ -6,14 +6,15 @@
 
 body {
     height: 100vh;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #circle {
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +22,10 @@ body {
     font-weight: bolder;
     background: rebeccapurple;
     border-radius: 50%;
+    font-size: 1.5rem;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+}
+
+.hover{
+    transform: scale(2);
 }
