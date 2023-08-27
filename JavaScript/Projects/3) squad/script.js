@@ -64,6 +64,7 @@ let data = [
 // }
 
 const ulEl = document.querySelector('#people');
+ulEl.classList.add('hide');
 
 let details = data.map((prop) => {
     return `<li>${prop.name + " - " + prop.age}</li>`;
@@ -73,21 +74,36 @@ console.log(details);
 
 ulEl.innerHTML = details.join("");
 
+
 const horizontalViewBtn = document.querySelector('#horizontal-view-button');
 const verticalBtn = document.querySelector('#vertical-view-button');
 
 horizontalViewBtn.addEventListener('click', () => {
-    if (!ulEl.classList.contains("horizontal-view")) {
-        ulEl.classList.add("horizontal-view");
+    // if ul hidden, display it
+    if (ulEl.classList.contains('hide')) {
+        ulEl.classList.remove('hide');
+    } 
+    // if vertical-view class present, remove it
+    if (ulEl.classList.contains("vertical-view")) {
         ulEl.classList.remove("vertical-view");
-        const liTags = document.getElementsByTagName('li');
-        console.log(liTags);
+    }
+    // if horizontal-view class not present, add it
+    if (!ulEl.classList.contains('horizontal-view')) {
+        ulEl.classList.add('horizontal-view');
     }
 });
 
 verticalBtn.addEventListener('click', () => {
-    if (!ulEl.classList.contains("vertical-view")) {
-        ulEl.classList.add("vertical-view");
+    // if ul hidden, display it
+    if (ulEl.classList.contains('hide')) {
+        ulEl.classList.remove('hide');
+    }
+    // if horizontal-view class present, remove it
+    if (ulEl.classList.contains("horizontal-view")) {
         ulEl.classList.remove("horizontal-view");
+    }
+    //if vertical-view class not present, add it
+    if (!ulEl.classList.contains('vertical-view')) {
+        ulEl.classList.add('vertical-view');
     }
 });

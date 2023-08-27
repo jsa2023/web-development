@@ -37,6 +37,14 @@ li {
     border: navajowhite;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 .horizontal-view {
     flex-direction: row;
     gap: 10px;
