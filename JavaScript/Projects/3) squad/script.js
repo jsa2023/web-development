@@ -49,6 +49,9 @@ let data = [
     },
 ]
 
+const myColor = document.getElementById("myColor")
+//console.log(myColor.value);
+
 // for (const prop of data) {
 //     const li = document.createElement('li');
 //     const span1 = document.createElement('span')
@@ -62,6 +65,21 @@ let data = [
 //     li.appendChild(span3)
 //     document.getElementById('people').appendChild(li)
 // }
+
+const backgroundColor = document.getElementById('background-color');
+const textColor = document.getElementById('text-color');
+
+backgroundColor.addEventListener('click', () => {
+    for (const li of ulEl.childNodes) {
+        li.style.background = myColor.value;
+    }
+});
+
+textColor.addEventListener('click', () => {
+    for (const li of ulEl.childNodes) {
+        li.style.color = myColor.value;
+    }
+})
 
 const ulEl = document.querySelector('#people');
 ulEl.classList.add('hide');
