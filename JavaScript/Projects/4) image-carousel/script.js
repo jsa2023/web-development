@@ -1,65 +1,115 @@
-const carousel = document.querySelector('.carousel');
 const imageContainer = document.querySelector('.image-container');
-const images = document.querySelectorAll('.image');
-const rightBtn = document.querySelector('#right');
-const leftBtn = document.querySelector('#left');
-const imgs = document.getElementById("imgs");
-const img = document.querySelectorAll("#imgs img")
+const imgs = document.querySelectorAll('.image-container img');
 
+const rightBtn = document.getElementById('right');
+const leftBtn = document.getElementById('left');
 
-console.log(img);
-
-// rightBtn.addEventListener('click', () => {
-//     imageContainer.classList.add('active');
-// });
-
-// // the index which represent the images
+let interval = setInterval(run, 3000);
 let idx = 0;
 
-let interval = setInterval(run, 2000) // run after every 2 seconds
-
-function run(){
-    idx++
-    changeImage()
+function run() {
+    idx++;
+    changeImage();
     console.log(idx);
 }
 
-function changeImage(){
-    if(idx > img.length - 1){ // it will reset the image to the first one
-        idx = 0
-    } else if(idx < 0){ // if we move backwards at the first image showthe last image  in that case
-        idx = img.length - 1
-
+function changeImage() {
+    if (idx > imgs.length - 1) {
+        idx = 0;
+        imageContainer.classList.remove('transition');
     }
 
-    imgs.style.transform = `translateX(${-idx * 500}px)`
+    if (idx < 0) {
+        idx = imgs.length - 1;
+    }
 
-}
-
-// // when i click the right btn
+    if (!imageContainer.classList.contains('transition') && idx !== 0 && idx !== 3) {
+        imageContainer.classList.add('transition');
+    }
+    imageContainer.style.transform = `translateX(-${idx * 100}%)`;
+};
 
 rightBtn.addEventListener('click', () => {
-   idx++
-   changeImage()
-console.log(idx);
+    clearInterval(interval);
+    run();
+    interval = setInterval(run, 2000);
+});
 
-})
-
-// // when i click the left btn
 leftBtn.addEventListener('click', () => {
-    idx--
-    changeImage()
-})
+    clearInterval(interval);
+    if (idx == 0) {
+        imageContainer.classList.remove('transition');
+        idx = 2;
+    }
+    else {
+        idx -= 2;
+    }
+
+    run();
+    interval = setInterval(run, 2000);
+});
 
 
-console.log(idx);
+// const carousel = document.querySelector('.carousel');
+// const imageContainer = document.querySelector('.image-container');
+// const images = document.querySelectorAll('.image');
+// const rightBtn = document.querySelector('#right');
+// const leftBtn = document.querySelector('#left');
+// const imgs = document.getElementById("imgs");
+// const img = document.querySelectorAll("#imgs img")
 
 
-/***
- * Homework:
- * Figure out the way to start and stop the setInterval in JS 
- * hint: Research on stack overflow
- * 
- * also look for more features and try to apply them on the safe copy of this project
- */
+// console.log(img);
 
+// // rightBtn.addEventListener('click', () => {
+// //     imageContainer.classList.add('active');
+// // });
+
+// // // the index which represent the images
+// let idx = 0;
+
+// let interval = setInterval(run, 2000) // run after every 2 seconds
+
+// function run(){
+//     idx++
+//     changeImage()
+//     console.log(idx);
+// }
+
+// function changeImage(){
+//     if(idx > img.length - 1){ // it will reset the image to the first one
+//         idx = 0
+//     } else if(idx < 0){ // if we move backwards at the first image showthe last image  in that case
+//         idx = img.length - 1
+
+//     }
+
+//     imgs.style.transform = `translateX(${-idx * 500}px)`
+
+// }
+
+// // // when i click the right btn
+
+// rightBtn.addEventListener('click', () => {
+//    idx++
+//    changeImage()
+// console.log(idx);
+
+// })
+
+// // // when i click the left btn
+// leftBtn.addEventListener('click', () => {
+//     idx--
+//     changeImage()
+// })
+
+
+// console.log(idx);
+
+
+// /***
+//  * Homework:
+//  * Figure out the way to start and stop the setInterval in JS 
+//  * hint: Research on stack overflow
+//  * 
+//  * also look for more features and try to apply them on the sa
