@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;   
+}
+
+.buttons {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 20px;
+    justify-content: space-between;
+
+}
+
+.magic{
+    background-color: #ffa52e;
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 12px 20px;
+    cursor: pointer;
+
+    letter-spacing: 1px;
+    box-shadow: 0 3px black;
+    z-index: 100;
+}
+
+
+.magic:focus{
+    outline: none;
+}
+
+
+.magic:active{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.boxes.big{
+    width: 600px;
+    height: 600px;
+}
+ 
+.boxes.big .box{
+    transform: rotateZ(360deg);
+}
+
+.change-effect {
+    /* transform: rotateY(360deg); */
+    transform:  rotateZ(180deg) scale(0.5);
+}
+
+.box{
+    background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
+    /* background-image: url("https://giphy.com/gifs/season-5-the-simpsons-5x15-26tk0jALFpsXmAF8c"); */
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+}
+
+
+.box::after{
+    content: '';
+    background-color: #ffa52e;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+.box::before{
+    content: '';
+    background-color: #ffa52e;
+    position: absolute;
+   bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}
+
+.new-image {
+    background-image: url("https://media.giphy.com/media/hQyfBDkCCeNjZ24MOY/giphy.gif");
+}
