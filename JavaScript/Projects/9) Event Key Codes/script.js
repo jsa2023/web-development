@@ -23,6 +23,50 @@ ${event.code}
     `
 })
 
+// ******************************************************
+
+// console.log($);
+
+
+// // $(document).ready(function () {
+
+//     // $('selector').action()
+
+//     // $("p").click(function(){
+//     //     // console.log("I clicked the p tag");
+//     //     $('p').hide()
+//     // })
+
+//     // $('p').click(function(){
+//     //     console.log("YOu have clicked", this);
+//     //     $(this).toggle()
+//     // })
+
+
+//     /**
+//      * There are 3 main type of query Selector in jQuery
+//      * 1) Element selector
+//      * 2) Class Selector
+//      * 3) ID selector
+//      */
+
+//     // $(".items").click(function () {
+//     //     const text = this.textContent;
+//     //     $(this).text = text + `<button>${text}</button>`
+//     //     console.log(this.textContent);
+//     // })
+
+//     /**
+//      * $("CSS Selector").action()
+//      * 
+//      * 
+//      */
+
+
+
+
+// // })
+
 
 
 console.log($);
@@ -30,33 +74,55 @@ console.log($);
 
 $(document).ready(function(){
 
-    // $('selector').action()
+    // $('p').click(function(){
+    //     // console.log("You clicked the p tag");
+    //     // $('p').hide()
+    //     // $('p').toggle()
 
-    // $("p").click(function(){
-    //     // console.log("I clicked the p tag");
-    //     $('p').hide()
+    //     $(this).hide()
+    //     console.log(this, "element");
     // })
 
-// $('p').click(function(){
-//     console.log("YOu have clicked", this);
-//     $(this).toggle()
-// })
 
+    
+//     /**
+//      * There are 3 main type of query Selector in jQuery
+//      * 1) Element selector
+//      * 2) Class Selector
+//      * 3) ID selector
+//      */
+
+
+// Events in Jquery
 
 /**
- * There are 3 main type of query Selector in jQuery
- * 1) Element selector
- * 2) Class Selector
- * 3) ID selector
+ * mouse events = click, dblclick, mouseenter, mouseleave, hover
+ * keyboard events = keypress, keydown, keyup, MediaKeyStatusMap
+ * form events = submit, change, focus, blur
+ * document/window events = load, resize, scroll, unload
  */
 
-    $(".items").click(function() {
-        const text = this.textContent;
-        $(this).text = text + `<button>${text}</button>`
-        console.log(this.textContent);
-    })
+// $('p').dblclick(function(){
+//     // console.log("I double clicked");
+//     $(this).addClass("newOne")
 
+// })
+// $('p').click(function(){
+//     // console.log("I double clicked");
+//     $(this).removeClass("newOne")
+// })
+
+$('.circle').mouseenter(function() {
+    console.log("Mouse entered");
+ $('.circle').addClass('bigCircle')
+})
+
+$('.circle').mouseleave(function() {
+ $('.circle').removeClass('bigCircle')
 })
 
 
 
+
+
+})

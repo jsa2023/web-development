@@ -1,3 +1,9 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
     display: flex;
     align-items: center;
@@ -30,4 +36,27 @@ body{
     width: 100%;
     color: #555;
     font-size: 14px;
+}
+
+p{
+    color: purple;
+
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: slateblue;
+}
+
+.bigCircle {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: slateblue;
+
+    transition-duration: 1s;
+    transition-delay: 0.4s;
+
 }
