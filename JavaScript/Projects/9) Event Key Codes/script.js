@@ -69,60 +69,60 @@ ${event.code}
 
 
 
-console.log($);
+// console.log($);
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    // $('p').click(function(){
-    //     // console.log("You clicked the p tag");
-    //     // $('p').hide()
-    //     // $('p').toggle()
+//     // $('p').click(function(){
+//     //     // console.log("You clicked the p tag");
+//     //     // $('p').hide()
+//     //     // $('p').toggle()
 
-    //     $(this).hide()
-    //     console.log(this, "element");
-    // })
+//     //     $(this).hide()
+//     //     console.log(this, "element");
+//     // })
 
 
     
-//     /**
-//      * There are 3 main type of query Selector in jQuery
-//      * 1) Element selector
-//      * 2) Class Selector
-//      * 3) ID selector
-//      */
+// //     /**
+// //      * There are 3 main type of query Selector in jQuery
+// //      * 1) Element selector
+// //      * 2) Class Selector
+// //      * 3) ID selector
+// //      */
 
 
-// Events in Jquery
+// // Events in Jquery
 
-/**
- * mouse events = click, dblclick, mouseenter, mouseleave, hover
- * keyboard events = keypress, keydown, keyup, MediaKeyStatusMap
- * form events = submit, change, focus, blur
- * document/window events = load, resize, scroll, unload
- */
+// /**
+//  * mouse events = click, dblclick, mouseenter, mouseleave, hover
+//  * keyboard events = keypress, keydown, keyup, MediaKeyStatusMap
+//  * form events = submit, change, focus, blur
+//  * document/window events = load, resize, scroll, unload
+//  */
 
-// $('p').dblclick(function(){
-//     // console.log("I double clicked");
-//     $(this).addClass("newOne")
+// // $('p').dblclick(function(){
+// //     // console.log("I double clicked");
+// //     $(this).addClass("newOne")
+
+// // })
+// // $('p').click(function(){
+// //     // console.log("I double clicked");
+// //     $(this).removeClass("newOne")
+// // })
+
+// $('.circle').mouseenter(function() {
+//     console.log("Mouse entered");
+//  $('.circle').addClass('bigCircle')
+// })
+
+// $('.circle').mouseleave(function() {
+//  $('.circle').removeClass('bigCircle')
+// })
+
+
+
+
 
 // })
-// $('p').click(function(){
-//     // console.log("I double clicked");
-//     $(this).removeClass("newOne")
-// })
-
-$('.circle').mouseenter(function() {
-    console.log("Mouse entered");
- $('.circle').addClass('bigCircle')
-})
-
-$('.circle').mouseleave(function() {
- $('.circle').removeClass('bigCircle')
-})
-
-
-
-
-
-})
